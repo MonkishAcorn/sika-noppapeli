@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sika-noppapeli</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <h1> Sika-noppapeli</h1>
+
+    <div class="asetukset">
+      <label>Pelaajien määrä:</label><br>
+
+<input type="number"
+       id="pelaajaMaara"
+       min="2"
+       max="6"
+       value="2">
+
+<div id="pelaajaNimet"></div><br>
+
+<button onclick="luoPelaajaKentat()">
+  Luo pelaajat
+</button><br><br>
+
+      <label>Valitse pelimuoto:</label>
+
+      <select id="noppaMaara">
+        <option value="1">1 noppa</option>
+        <option value="2">2 noppaa</option>
+      </select>
+
+      <button onclick="aloitaPeli()">Aloita peli</button>
+
+    </div>
+
+    <div class="pelaaja-info">
+      <h2 id="vuoro">Vuoro: Pelaaja 1</h2>
+      <p>Kierrospisteet: <span id="kierrosPisteet">0</span></p>
+    </div>
+
+    <div class="nopat">
+      <div class="noppa" id="noppa1">0</div>
+      <div class="noppa" id="noppa2">0</div>
+    </div>
+
+    <div class="painikkeet">
+      <button onclick="heitaNoppaa()">Heitä</button>
+      <button onclick="pidaPisteet()">Pidä pisteet</button>
+    </div>
+
+    <div id="pelaajat"></div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
